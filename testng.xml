@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+  <test name="Testchromelocal">
+	<parameter name="browserName" value = "chrome"></parameter>
+    <classes>
+      <class name="com.GridTesting.TestClass"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Testfirefoxlocal">
+	<parameter name="browserName" value = "firefox"></parameter>
+    <classes>
+      <class name="com.GridTesting.TestClass"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="TestchromeGrid">
+	<parameter name="browserName" value = "gridchrome"></parameter>
+    <classes>
+      <class name="com.GridTesting.TestClass"/>
+    </classes>
+  </test> <!-- Test -->
+   <test name="TestFirefoxGrid">
+	<parameter name="browserName" value = "gridfirefox"></parameter>
+    <classes>
+      <class name="com.GridTesting.TestClass"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
