@@ -6,6 +6,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -40,8 +41,14 @@ public class BaseClass {
 
 			case GRIDCHROME:
 				Reporter.log("Requesting execution on Chrome browser-GRID", true);
-				ChromeOptions option = new ChromeOptions();
-				WebDriverManager.chromedriver().setup();
+				EdgeOptions option = new EdgeOptions();
+				/*
+				 * DesiredCapabilities caps = new DesiredCapabilities();
+				 * caps.setCapability("os", "Windows"); caps.setCapability("os_version", "11");
+				 * caps.setCapability("browser", "edge"); caps.setCapability("browser_version",
+				 * "133");
+				 */
+				WebDriverManager.edgedriver().setup();
 				driver.set(new RemoteWebDriver(gridUrl, option));
 				break;
 
